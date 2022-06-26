@@ -7,6 +7,11 @@ pipeline {
     agent any
  
     stages {
+        stage('clean-up'){
+            steps {
+                cleanWs()
+            }
+        }
         stage('Hello') {
             steps {
                 sh 'mkdir '+"${microservice}"
@@ -18,11 +23,6 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }
-        }
-    }
-    post { 
-        always { 
-            cleanWs()
         }
     }
 }
