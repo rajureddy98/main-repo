@@ -1,7 +1,7 @@
 pipeline {
 agent any
 environment {
-        env.BRANCH = 'account-service'
+        BRANCH = 'account-service'
     }
 stages {
     stage('build') {
@@ -16,7 +16,7 @@ stages {
 
 }
 
-def showMavenVersion(String branch) {
-        echo 'https://github.com/rajureddy98/'"${env.BRANCH}"
-        echo "${env.BRANCH}"
+def showMavenVersion(String BRANCH) {
+        echo 'https://github.com/rajureddy98/'"${BRANCH}"
+        echo "${BRANCH}"
 }
