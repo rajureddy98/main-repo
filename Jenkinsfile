@@ -17,6 +17,7 @@ pipeline {
         stage('parent-build'){
             steps {
                 sh 'cd ..'
+                sh 'pwd'
                 sh 'mvn package'
             }
         }
