@@ -1,7 +1,7 @@
 pipeline {
 agent any
 environment {
-        env.BRANCH = "account-service"
+        env.BRANCH = 'account-service'
     }
 stages {
     stage('build') {
