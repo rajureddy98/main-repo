@@ -8,7 +8,7 @@ stages {
         agent any
         steps {
             script {
-                showMavenVersion(BRANCH)
+                showMavenVersion("${BRANCH}")
             }
         }
     }
