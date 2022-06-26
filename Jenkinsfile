@@ -1,6 +1,6 @@
 def Git_checkout(branch) {
-    echo 'branch'+"${microservice}"
-    echo 'https://github.com/rajureddy98/'+branch
+    echo 'branch = '+"${microservice}"
+    git 'https://github.com/rajureddy98/'+branch
 }
 
 pipeline {
