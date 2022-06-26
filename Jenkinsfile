@@ -7,7 +7,7 @@ pipeline {
     agent any
  
     stages {
-        stage('scm checkout') {
+        stage('clean WS') {
             steps {
                 cleanWs()
             }
