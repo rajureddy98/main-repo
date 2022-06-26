@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('scm checkout') {
             steps {
+                sh 'mvn help:evaluate -Dexpression=settings.localRepository'
                 sh 'mkdir '+"${microservice}"
                 sh 'cd '+"${microservice}"
                 Git_checkout("${microservice}")
