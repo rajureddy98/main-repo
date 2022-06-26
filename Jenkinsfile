@@ -1,5 +1,5 @@
 def Git_checkout(branch) {
-    echo 'https://github.com/rajureddy98/'"${BRANCH}"
+    echo 'https://github.com/rajureddy98/'"${branch}"
 }
 
 pipeline {
