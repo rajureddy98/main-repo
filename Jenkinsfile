@@ -7,11 +7,6 @@ pipeline {
     agent any
  
     stages {
-        stage('parent-build'){
-            steps {
-                sh 'mvn clean package'
-            }
-        }
         stage('scm checkout') {
             steps {
                 sh 'mkdir '+"${microservice}"
@@ -19,8 +14,15 @@ pipeline {
                 Git_checkout("${microservice}")
             }
         }
+        stage('parent-build'){
+            steps {
+                sh 'cd ..'
+                sh 'mvn clean package'
+            }
+        }
         stage('ms-pob-build'){
             steps {
+                sh 'cd '+"${microservice}"
                 sh 'mvn clean package'
             }
         }
