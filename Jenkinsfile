@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                mkdir branch
-                cd branch
+                mkdir "${microservice}"
+                cd "${microservice}"
                 Git_checkout("${microservice}")
             }
         }
