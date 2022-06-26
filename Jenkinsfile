@@ -1,6 +1,6 @@
 def Git_checkout(branch) {
+    echo 'branch'+"${microservice}"
     echo 'https://github.com/rajureddy98/'+branch
-    echo "${microservice}"
 }
 
 pipeline {
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                Git_checkout('accout-service')
+                Git_checkout("${microservice}")
             }
         }
     }
