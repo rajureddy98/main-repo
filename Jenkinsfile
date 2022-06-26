@@ -12,14 +12,19 @@ pipeline {
                 cleanWs()
             }
         }
-        stage('Hello') {
+        stage('parent-build'){
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('scm checkout') {
             steps {
                 sh 'mkdir '+"${microservice}"
                 sh 'cd '+"${microservice}"
                 Git_checkout("${microservice}")
             }
         }
-        stage('maven'){
+        stage('ms-pob-build'){
             steps {
                 sh 'mvn clean package'
             }
