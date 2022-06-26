@@ -16,7 +16,7 @@ stages {
 
 }
 
-def showMavenVersion(String BRANCH) {
+def showMavenVersion(BRANCH) {
         echo 'https://github.com/rajureddy98/'"${BRANCH}"
         echo "${BRANCH}"
 }
