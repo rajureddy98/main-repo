@@ -1,5 +1,5 @@
-def Greet(name) {
-    echo "Hello ${name}"
+def Git_checkout(branch) {
+    echo 'https://github.com/rajureddy98/'"${BRANCH}"
 }
 
 pipeline {
@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                Greet('NaiveSkill')
+                Git_checkout('accout-service')
             }
         }
     }
