@@ -18,6 +18,7 @@ pipeline {
             steps {
                 sh 'cd ..'
                 sh 'pwd'
+                sh 'mvn help:evaluate -Dexpression=settings.localRepository'
                 sh 'mvn package'
             }
         }
