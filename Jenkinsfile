@@ -1,11 +1,13 @@
 pipeline {
 agent any
+environment {
+        env.BRANCH = "account-service"
+    }
 stages {
     stage('build') {
         agent any
         steps {
             script {
-                env.BRANCH = "account-service"
                 showMavenVersion('mvn version')
             }
         }
