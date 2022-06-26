@@ -13,7 +13,9 @@ pipeline {
             }
         }
         stage('maven'){
-            sh ' mvn clean package'
+            steps {
+                sh ' mvn clean package'
+            }
         }
     }
 }
