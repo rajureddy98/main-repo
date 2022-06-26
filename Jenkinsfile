@@ -17,7 +17,7 @@ pipeline {
         stage('parent-build'){
             steps {
                 sh 'cd ..'
-                sh 'mvn clean package'
+                sh 'mvn package'
             }
         }
         stage('ms-pob-build'){
