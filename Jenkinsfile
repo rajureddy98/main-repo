@@ -11,9 +11,9 @@ pipeline {
             steps {
                 Git_checkout("${microservice}")
             }
+        }
         stage('maven'){
             sh ' mvn clean package'
-            }
         }
     }
 }
