@@ -15,5 +15,6 @@ stages {
 }
 
 def showMavenVersion(String branch) {
-        echo 'https://github.com/rajureddy98/"${env.BRANCH}"'
+        echo 'https://github.com/rajureddy98/'"${env.BRANCH}"
+        echo "${env.BRANCH}"
 }
