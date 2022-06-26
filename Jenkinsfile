@@ -9,12 +9,14 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                mkdir branch
+                cd branch
                 Git_checkout("${microservice}")
             }
         }
         stage('maven'){
             steps {
-                sh ' mvn clean package'
+                sh 'mvn clean package'
             }
         }
     }
