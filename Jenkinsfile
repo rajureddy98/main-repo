@@ -1,22 +1,15 @@
+def Greet(name) {
+    echo "Hello ${name}"
+}
+
 pipeline {
-agent any
-environment {
-        BRANCH = 'account-service'
-    }
-stages {
-    stage('build') {
-        agent any
-        steps {
-            script {
-                showMavenVersion(BRANCH)
+    agent any
+ 
+    stages {
+        stage('Hello') {
+            steps {
+                Greet('NaiveSkill')
             }
         }
     }
-}
-
-}
-
-def showMavenVersion(BRANCH) {
-        echo 'https://github.com/rajureddy98/'"${BRANCH}"
-        echo "${BRANCH}"
 }
